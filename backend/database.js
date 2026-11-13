@@ -1,5 +1,5 @@
 const Database = require('better-sqlite3');
-const db = new Database('hangman.db');
+const db = new Database('/tmp/hangman.db');
 
 // Turn on foreign keys
 db.pragma('foreign_keys = ON'); 

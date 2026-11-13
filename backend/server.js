@@ -5,7 +5,12 @@ const authRoutes = require('./routes/auth');
 const gameRoutes = require('./routes/game');
 
 const app = express();
-app.use(cors());
+
+// Replace the URL below with your ACTUAL deployed frontend URL (from Vercel/Netlify)
+app.use(cors({
+  origin: 'https://your-frontend-name.vercel.app' 
+}));
+
 app.use(express.json());
 
 app.use('/api/auth', authRoutes);
