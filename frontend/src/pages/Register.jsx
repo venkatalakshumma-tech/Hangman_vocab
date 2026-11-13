@@ -27,7 +27,7 @@ export default function Register() {
       localStorage.setItem('username', data.username)
       nav('/home')
     } catch (err) {
-      setError(err.response?.data?.message || 'Registration failed. Please try again.')
+      setError(err.response?.data?.message || err.message ||'Registration failed. Please try again.')
       setLoading(false)
     }
   }
